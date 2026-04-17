@@ -1,0 +1,130 @@
+{%- liquid
+  assign entries = product.metafields.custom.breakdown_parts.value
+-%}
+
+{%- if entries != blank -%}
+  {{ 'component-breakdown-parts.css' | asset_url | stylesheet_tag }}
+  <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+
+  {%- style -%}
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    }
+    @media screen and (min-width: 750px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+    }
+  {%- endstyle -%}
+
+  <div class="color-{{ section.settings.color_scheme }} gradient isolate section-{{ section.id }}-padding">
+    <div class="page-width">
+      {%- if section.settings.heading != blank -%}
+        <h2 class="breakdown-parts__section-heading h3">
+          {{- section.settings.heading -}}
+        </h2>
+      {%- endif -%}
+
+      {% render 'breakdown-parts',
+        product: product,
+        section: section,
+        entries: entries
+      %}
+    </div>
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Breakdown parts",
+  "tag": "section",
+  "class": "section",
+  "enabled_on": {
+    "templates": ["product"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "default": "Parts breakdown",
+      "label": "Section heading"
+    },
+    {
+      "type": "text",
+      "id": "diagram_heading",
+      "default": "Diagram",
+      "label": "Diagram column heading"
+    },
+    {
+      "type": "text",
+      "id": "list_heading",
+      "default": "Parts list",
+      "label": "Parts list column heading"
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_prices",
+      "default": true,
+      "label": "Show pricing"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_notes",
+      "default": true,
+      "label": "Show notes"
+    },
+    {
+      "type": "select",
+      "id": "diagram_source",
+      "options": [
+        { "value": "featured", "label": "Product featured image" },
+        { "value": "last", "label": "Product's last image" },
+        { "value": "second", "label": "Product's second image" }
+      ],
+      "default": "featured",
+      "label": "Diagram image source"
+    },
+    {
+      "type": "header",
+      "content": "Appearance"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "default": "scheme-1",
+      "label": "Color scheme"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "Breakdown parts"
+    }
+  ]
+}
+{% endschema %}

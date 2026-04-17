@@ -1,0 +1,228 @@
+/* ---------- Section heading ---------- */
+
+.breakdown-parts__section-heading {
+  margin: 0 0 2rem;
+  font-weight: 600;
+}
+
+/* ---------- Two-column layout ---------- */
+
+.breakdown-parts {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+@media screen and (min-width: 990px) {
+  .breakdown-parts {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 4rem;
+    align-items: start;
+  }
+}
+
+.breakdown-parts__column-heading {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 0 0 1.5rem;
+  letter-spacing: -0.01em;
+}
+
+/* Diagram column */
+
+.breakdown-parts__diagram-wrap {
+  border: 0.1rem solid rgba(var(--color-foreground), 0.15);
+  border-radius: 0.8rem;
+  padding: 1.6rem;
+  background: rgb(var(--color-background));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 24rem;
+}
+
+.breakdown-parts__diagram-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.breakdown-parts__diagram-empty {
+  color: rgba(var(--color-foreground), 0.5);
+  font-size: 1.3rem;
+}
+
+@media screen and (min-width: 990px) {
+  .breakdown-parts__diagram-wrap {
+    position: sticky;
+    top: 2rem;
+  }
+}
+
+/* Parts list column */
+
+.breakdown-parts__items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  max-height: 70rem;
+  overflow-y: auto;
+  padding-right: 0.4rem;
+}
+
+.breakdown-parts__items::-webkit-scrollbar {
+  width: 0.6rem;
+}
+
+.breakdown-parts__items::-webkit-scrollbar-thumb {
+  background: rgba(var(--color-foreground), 0.2);
+  border-radius: 0.3rem;
+}
+
+.breakdown-parts__item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1.6rem;
+  align-items: center;
+  padding: 1.6rem 0;
+  border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.1);
+}
+
+.breakdown-parts__item:first-child {
+  padding-top: 0;
+}
+
+.breakdown-parts__item:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.breakdown-parts__item-main {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.breakdown-parts__item-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: rgb(var(--color-link, var(--color-foreground)));
+  text-decoration: none;
+  line-height: 1.3;
+}
+
+.breakdown-parts__item-title:hover {
+  text-decoration: underline;
+}
+
+.breakdown-parts__item-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.6rem;
+  font-size: 1.3rem;
+  color: rgba(var(--color-foreground), 0.75);
+  margin-top: 0.2rem;
+}
+
+.breakdown-parts__meta-item {
+  display: inline-flex;
+  gap: 0.4rem;
+}
+
+.breakdown-parts__meta-label {
+  color: rgba(var(--color-foreground), 0.6);
+}
+
+.breakdown-parts__meta-value {
+  font-weight: 500;
+  color: rgb(var(--color-foreground));
+}
+
+.breakdown-parts__prices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.6rem;
+  font-size: 1.4rem;
+  margin-top: 0.4rem;
+}
+
+.breakdown-parts__price strong {
+  font-weight: 700;
+}
+
+.breakdown-parts__list-price {
+  color: rgba(var(--color-foreground), 0.55);
+}
+
+.breakdown-parts__notes {
+  font-size: 1.3rem;
+  color: rgba(var(--color-foreground), 0.7);
+  margin-top: 0.4rem;
+  font-style: italic;
+}
+
+/* Actions (qty box + add button) */
+
+.breakdown-parts__item-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+.breakdown-parts__qty-box {
+  width: 4.4rem;
+  height: 4.4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0.15rem solid rgba(var(--color-foreground), 0.25);
+  border-radius: 0.6rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+  font-variant-numeric: tabular-nums;
+  background: rgb(var(--color-background));
+  color: rgb(var(--color-foreground));
+}
+
+.breakdown-parts__form-wrap {
+  display: block;
+}
+
+.breakdown-parts__form {
+  margin: 0;
+}
+
+.breakdown-parts__button {
+  min-height: 4.4rem;
+  padding: 0 1.6rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  min-width: 11rem;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 749px) {
+  .breakdown-parts__item {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .breakdown-parts__item-actions {
+    justify-content: flex-start;
+    margin-top: 0.4rem;
+  }
+
+  .breakdown-parts__items {
+    max-height: none;
+    overflow-y: visible;
+  }
+
+  .breakdown-parts__diagram-wrap {
+    min-height: auto;
+  }
+}

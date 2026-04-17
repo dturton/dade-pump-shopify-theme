@@ -1,0 +1,159 @@
+{%- comment -%}
+  Renders the two-column Breakdown Parts content (Diagram | Parts list).
+
+  Accepts:
+    - product: {Product}   Product whose `custom.breakdown_parts` metafield holds the entries.
+    - section: {Section}   The parent breakdown-parts section (for settings + id).
+    - entries: {Array}     The raw metaobject list (already resolved in the section).
+{%- endcomment -%}
+
+{%- liquid
+  assign sorted_entries = entries | sort: 'ref_number'
+
+  case section.settings.diagram_source
+    when 'last'
+      assign diagram_image = product.images.last
+    when 'second'
+      assign diagram_image = product.images[1]
+    else
+      assign diagram_image = product.featured_image
+  endcase
+
+  assign diagram_alt = diagram_image.alt | default: product.title | escape
+-%}
+
+<div class="breakdown-parts">
+  <div class="breakdown-parts__diagram">
+    <h3 class="breakdown-parts__column-heading">
+      {{- section.settings.diagram_heading | default: 'Diagram' -}}
+    </h3>
+    <div class="breakdown-parts__diagram-wrap">
+      {%- if diagram_image != blank -%}
+        {{
+          diagram_image
+          | image_url: width: 1400
+          | image_tag:
+            loading: 'lazy',
+            widths: '400,600,800,1000,1200,1400',
+            sizes: '(min-width: 990px) 50vw, 100vw',
+            alt: diagram_alt,
+            class: 'breakdown-parts__diagram-img'
+        }}
+      {%- else -%}
+        <div class="breakdown-parts__diagram-empty">
+          <span>No diagram available</span>
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+
+  <div class="breakdown-parts__list-wrap">
+    <h3 class="breakdown-parts__column-heading">
+      {{- section.settings.list_heading | default: 'Parts list' -}}
+    </h3>
+
+    <ul class="breakdown-parts__items" role="list">
+      {%- for entry in sorted_entries -%}
+        {%- liquid
+          assign part = entry.part.value
+          if part == blank
+            continue
+          endif
+          assign qty = entry.quantity_needed.value | default: 1
+          assign variant = part.selected_or_first_available_variant
+          assign form_id = 'BreakdownPart-' | append: section.id | append: '-' | append: forloop.index
+          assign ref_number = entry.ref_number.value
+        -%}
+        <li class="breakdown-parts__item">
+          <div class="breakdown-parts__item-main">
+            <a href="{{ part.url }}" class="breakdown-parts__item-title">
+              {{- part.title -}}
+            </a>
+
+            <div class="breakdown-parts__item-meta">
+              {%- if ref_number != blank -%}
+                <span class="breakdown-parts__meta-item">
+                  <span class="breakdown-parts__meta-label">Ref No:</span>
+                  <span class="breakdown-parts__meta-value">{{ ref_number }}</span>
+                </span>
+              {%- endif -%}
+              {%- if variant.sku != blank -%}
+                <span class="breakdown-parts__meta-item">
+                  <span class="breakdown-parts__meta-label">Part No:</span>
+                  <span class="breakdown-parts__meta-value">{{ variant.sku }}</span>
+                </span>
+              {%- endif -%}
+              <span class="breakdown-parts__meta-item">
+                <span class="breakdown-parts__meta-label">Qty Req:</span>
+                <span class="breakdown-parts__meta-value">{{ qty }}</span>
+              </span>
+            </div>
+
+            {%- if section.settings.show_prices and variant and variant.price > 0 -%}
+              <div class="breakdown-parts__prices">
+                <span class="breakdown-parts__price">
+                  Our price:
+                  <strong>{{ variant.price | money }}</strong>
+                </span>
+                {%- if variant.compare_at_price != blank and variant.compare_at_price > variant.price -%}
+                  <span class="breakdown-parts__list-price">
+                    List price:
+                    <s>{{ variant.compare_at_price | money }}</s>
+                  </span>
+                {%- endif -%}
+              </div>
+            {%- endif -%}
+
+            {%- if section.settings.show_notes and entry.notes.value != blank -%}
+              <div class="breakdown-parts__notes">{{ entry.notes.value }}</div>
+            {%- endif -%}
+          </div>
+
+          <div class="breakdown-parts__item-actions">
+            <div class="breakdown-parts__qty-box" aria-label="Quantity needed: {{ qty }}">
+              {{- qty -}}
+            </div>
+
+            {%- if variant == nil -%}
+              <a href="{{ part.url }}" class="button breakdown-parts__button">View</a>
+            {%- else -%}
+              <product-form class="breakdown-parts__form-wrap" data-section-id="{{ section.id }}">
+                {%- form 'product',
+                  part,
+                  id: form_id,
+                  class: 'form breakdown-parts__form',
+                  novalidate: 'novalidate',
+                  data-type: 'add-to-cart-form'
+                -%}
+                  <input type="hidden" name="id" value="{{ variant.id }}" class="product-variant-id">
+                  <input type="hidden" name="quantity" value="{{ qty }}">
+                  <button
+                    id="{{ form_id }}-submit"
+                    type="submit"
+                    name="add"
+                    class="button breakdown-parts__button breakdown-parts__add"
+                    aria-live="polite"
+                    data-sold-out-message="true"
+                    {% if variant.available == false %}disabled{% endif %}
+                  >
+                    <span>
+                      {%- if variant.available -%}
+                        Add to cart
+                      {%- else -%}
+                        {{ 'products.product.sold_out' | t }}
+                      {%- endif -%}
+                    </span>
+                    <span class="sold-out-message hidden">
+                      {{ 'products.product.sold_out' | t }}
+                    </span>
+                    {%- render 'loading-spinner' -%}
+                  </button>
+                {%- endform -%}
+              </product-form>
+            {%- endif -%}
+          </div>
+        </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+</div>
