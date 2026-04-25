@@ -41,6 +41,7 @@
 
   <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'read-more.js' | asset_url }}" defer="defer"></script>
   {%- if product.quantity_price_breaks_configured? -%}
     <script src="{{ 'show-more.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'price-per-item.js' | asset_url }}" defer="defer"></script>
@@ -193,9 +194,26 @@
                 </p>
               {%- when 'description' -%}
                 {%- if product.description != blank -%}
-                  <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
-                    {{ product.description }}
-                  </div>
+                  <read-more
+                    class="product__description-wrap quick-add-hidden"
+                    data-collapsed-height="240"
+                    data-collapsed-label="Read more"
+                    data-expanded-label="Read less"
+                    {{ block.shopify_attributes }}
+                  >
+                    <div class="product__description rte" data-read-more-content>
+                      {{ product.description }}
+                    </div>
+                    <button
+                      type="button"
+                      class="product__description-toggle link"
+                      data-read-more-toggle
+                      aria-controls="ProductDescription-{{ section.id }}"
+                      hidden
+                    >
+                      Read more
+                    </button>
+                  </read-more>
                 {%- endif -%}
               {%- when 'sku' -%}
                 <p

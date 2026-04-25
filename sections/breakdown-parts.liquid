@@ -5,6 +5,7 @@
 {%- if entries != blank -%}
   {{ 'component-breakdown-parts.css' | asset_url | stylesheet_tag }}
   <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'breakdown-zoom.js' | asset_url }}" defer="defer"></script>
 
   {%- style -%}
     .section-{{ section.id }}-padding {

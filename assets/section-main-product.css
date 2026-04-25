@@ -227,8 +227,49 @@ product-info {
 
 .product__info-container .product-form,
 .product__info-container .product__description,
+.product__info-container .product__description-wrap,
 .product__info-container .icon-with-text {
   margin: 2.5rem 0;
+}
+
+.product__description-wrap {
+  display: block;
+  position: relative;
+}
+
+.product__description-wrap .product__description {
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  margin: 0;
+}
+
+.product__description-wrap.is-clampable:not(.is-expanded) .product__description {
+  -webkit-mask-image: linear-gradient(to bottom, #000 60%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 60%, transparent 100%);
+}
+
+.product__description-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 1.2rem;
+  padding: 0;
+  background: none;
+  border: none;
+  font: inherit;
+  font-weight: 600;
+  color: rgb(var(--color-foreground));
+  text-decoration: underline;
+  text-underline-offset: 0.4rem;
+  cursor: pointer;
+}
+
+.product__description-toggle:hover {
+  text-decoration: none;
+}
+
+.product__description-toggle[hidden] {
+  display: none;
 }
 
 .product__text {
