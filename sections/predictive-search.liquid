@@ -161,6 +161,8 @@
                       {%- if settings.predictive_search_show_price -%}
                         {% render 'price', product: product, use_variant: true, show_badges: false %}
                       {%- endif -%}
+                      {% comment %} MAP cue in the predictive-search dropdown (shows even when price is hidden here). {% endcomment %}
+                      {% render 'map-card-badge', product: product %}
                     </div>
                   </a>
                 </li>

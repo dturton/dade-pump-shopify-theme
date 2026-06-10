@@ -1,0 +1,69 @@
+{% doc %}
+  Renders a compact "MAP" badge and an "add to cart for price" note on a product
+  card when the product has MAP pricing enabled.
+
+  Companion to the product-page app block (extensions/map-price-notice): reads only
+  the storefront-visible `map_enabled` boolean from the app's reserved metafield
+  namespace (bracket notation, since reserved namespaces with `--` can't be
+  dot-accessed) and never reveals `actual_price`. The card keeps showing
+  `variant.price` (the MAP) — this snippet only annotates it.
+
+  Install in the theme at snippets/map-card-badge.liquid and render it right after
+  the price in snippets/card-product.liquid. See storefront/README.md.
+
+  @param {product} product - The card's product object (Dawn passes `card_product`).
+
+  @example
+  {% render 'map-card-badge', product: card_product %}
+{% enddoc %}
+
+{%- liquid
+  # App reserved metafield namespace — must match the product-page block setting and
+  # Admin -> Settings -> Custom data -> Variant metafields ("MAP enabled").
+  assign ns = 'app--368457482241'
+
+  assign has_any_map = false
+  for v in product.variants
+    assign vmf = v.metafields[ns].map_enabled
+    if vmf == blank
+      assign vmf = v.metafields.app.map_enabled
+    endif
+    if vmf.value
+      assign has_any_map = true
+      break
+    endif
+  endfor
+-%}
+
+{%- if has_any_map -%}
+  <div class="map-card-badge">
+    <span class="map-card-badge__pill">MAP</span>
+    <span class="map-card-badge__note">Add to cart for price</span>
+  </div>
+{%- endif -%}
+
+{% stylesheet %}
+  .map-card-badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-top: 4px;
+  }
+  .map-card-badge__pill {
+    display: inline-block;
+    background: #c0392b;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-size: 11px;
+    line-height: 1;
+    padding: 3px 7px;
+    border-radius: 4px;
+  }
+  .map-card-badge__note {
+    color: #555;
+    font-size: 12px;
+  }
+{% endstylesheet %}
