@@ -114,34 +114,34 @@
           "settings": {
             "heading": "What Is Your Pump and Electric Motor Warranty Process?",
             "icon": "check_mark",
-            "row_content": "<p>Most pumps, electric motors, controls, and replacement parts sold by Dade Pump & Supply are covered by manufacturer warranties. If you believe your product qualifies for warranty consideration, please submit a warranty evaluation request to <a href=\"mailto:warranty@dadepump.com\">warranty@dadepump.com</a>.</p><p>To expedite the review process, include:</p><ul><li>Photos of the product</li><li>Videos showing the issue (if applicable)</li><li>A description of the problem</li><li>Your order information</li></ul><p>Warranty claims are typically reviewed within 24 to 48 business hours. Final warranty approval or denial is determined by the manufacturer. Shipping and related costs are generally not covered by either the manufacturer or Dade Pump & Supply. Our team will advocate on your behalf throughout the warranty process.</p>",
+            "row_content": "<p>Most pumps, electric motors, controls, and replacement parts sold by Dade Pump & Supply are covered by manufacturer warranties. If you believe your product qualifies for warranty consideration, please submit a warranty evaluation request to <a href=\"mailto:warranty@dadepump.com\">warranty@dadepump.com</a>.</p><p><strong>To expedite the review process, include:</strong></p><ul><li><em>Photos of the product</em></li><li><em>Videos showing the issue (if applicable)</em></li><li><em>A description of the problem</em></li><li><em>Your order information</em></li></ul><p>Warranty claims are typically reviewed within 24 to 48 business hours. Final warranty approval or denial is determined by the manufacturer. Shipping and related costs are generally not covered by either the manufacturer or Dade Pump & Supply. Our team will advocate on your behalf throughout the warranty process.</p>",
             "page": ""
           }
         },
         "collapsible_row_V49QnQ": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "What Is Your Return Policy?",
             "icon": "check_mark",
-            "row_content": "",
+            "row_content": "<p>All returns require prior authorization from our Returns Department. Once approved, you will receive a Return Merchandise Authorization (RMA) number and return instructions.</p><p><strong>Important Return Policy Information:</strong></p><ul><li><strong>Returns are subject to a 20% restocking fee.</strong></li><li><strong>Products must be unused and in original packaging.</strong></li><li><strong>Returns must be requested within 30 days of the invoice date.</strong></li><li><strong>Products older than 30 days from the invoice date are not eligible for return.</strong></li><li><strong>Dade Pump & Supply reserves the right to deduct outbound shipping costs from refunds when free shipping promotions were applied.</strong></li><li><strong>Return shipping costs are the responsibility of the customer.</strong></li></ul><p>Most return requests are reviewed within 24 to 48 business hours.</p>",
             "page": ""
           }
         },
         "collapsible_row_6FAMrX": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "Is My Pump, Motor, or Replacement Part In Stock?",
             "icon": "check_mark",
-            "row_content": "",
+            "row_content": "<p>We stock a large inventory of pumps, electric motors, controls, repair parts, and accessories from leading manufacturers. However, inventory changes frequently due to in-store sales, online purchases, repair shop usage, phone orders, and manufacturer availability.</p><p>Because inventory levels change throughout the day, we do not display live stock quantities on our website. To confirm product availability, please call <a href=\"tel:+1-305-235-5000\" title=\"tel:+1-305-235-5000\">(305) 235-5000</a> or email <a href=\"mailto:sales@dadepump.com\">sales@dadepump.com</a>. Our team can verify stock status, estimated lead times, and alternative product options if needed.</p>",
             "page": ""
           }
         },
         "collapsible_row_CHfN8B": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "What is MAP Pricing?",
             "icon": "check_mark",
-            "row_content": "",
+            "row_content": "<p>MAP stands for <strong>Minimum Advertised Price</strong>. Certain manufacturers, including Goulds Water Technology, require authorized distributors to display products online at or above a specified advertised price.</p><p>As an authorized Goulds distributor, Dade Pump follows all manufacturer MAP policies. However, the MAP price is not always the final selling price. To view your available purchase price, simply add the product to your cart. Adding an item to your cart does not obligate you to complete the purchase.</p><p>If you have questions about pricing, product selection, or availability, our team is happy to help.</p>",
             "page": ""
           }
         }
