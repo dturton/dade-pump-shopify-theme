@@ -27,19 +27,11 @@
             "text": "Nationwide: (305) 420-6676 - Add Product to Cart for Lowest Price! - Free Shipping on Orders $250 and Up *Exclusions Apply",
             "link": "shopify://policies/shipping-policy"
           }
-        },
-        "announcement_p3Gpj6": {
-          "type": "announcement",
-          "settings": {
-            "text": "Welcome to our store",
-            "link": ""
-          }
         }
       },
       "block_order": [
         "announcement_rBC8ar",
-        "announcement-bar-0",
-        "announcement_p3Gpj6"
+        "announcement-bar-0"
       ],
       "settings": {
         "auto_rotate": false,
