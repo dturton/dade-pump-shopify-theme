@@ -33,7 +33,7 @@
         "text_AbmcB3": {
           "type": "text",
           "settings": {
-            "text": "<strong>The #1 Source for Pumps & Motors Sales —  Service — Repairs — Rewinds. Serving the Wastewater, Sewage, Irrigation, Sprinkler, Pool, Pond, Well, Jet, Car Wash, Agriculture Industries & More!</strong>",
+            "text": "<strong>The #1 Source for Pumps & Motors Sales —  Service — Repairs — Rewinds. Serving the Wastewater, Sewage, Irrigation, Sprinkler, Pool, Pond, Well, Jet, Car Wash, Agriculture Industries & More! Free Shipping on Orders $250 and Up! *</strong><a href=\"/pages/policies\" title=\"Policies\"><strong>Exclusions Apply</strong></a>",
             "text_style": "subtitle"
           }
         }
@@ -95,7 +95,7 @@
         "column_KGXCVY"
       ],
       "settings": {
-        "title": "<strong>Dade Pump & Supply DBA De Ruiter Electric Motor Co. - Celebrates 66 Years in Business!</strong>",
+        "title": "Dade Pump & Supply DBA De Ruiter Electric Motor Co. - Celebrates 66 Years in Business!",
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
@@ -109,6 +109,49 @@
         "swipe_on_mobile": false,
         "padding_top": 40,
         "padding_bottom": 36
+      }
+    },
+    "rich_text_Vn8dz4": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_mC8QQD": {
+          "type": "heading",
+          "settings": {
+            "heading": "Shipping's On Us!",
+            "heading_size": "h1"
+          }
+        },
+        "text_eq4wDA": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Spend $250 or more and we'll cover the shipping* to the lower 48 on qualifying orders.</strong></p><h3>⚡ Need It Fast?</h3><p>Most in-stock orders placed by 12:00 PM ET ship the same business day.* Less waiting. Less downtime. More getting the job done.</p><p>*Some exclusions apply, including freight shipments, special-order products, and items requiring special handling.</p>"
+          }
+        },
+        "button_44NTf4": {
+          "type": "button",
+          "settings": {
+            "button_label": "Learn More",
+            "button_link": "https://dadepump.com/policies/shipping-policy",
+            "button_style_secondary": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_mC8QQD",
+        "text_eq4wDA",
+        "button_44NTf4"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "collection_list_DannCJ": {
@@ -268,8 +311,8 @@
       "settings": {
         "blog": "resources",
         "post_limit": 3,
-        "heading": "Blog posts",
-        "heading_size": "h2",
+        "heading": "Industrial Pumps, Motors & Equipment — Expert Insights",
+        "heading_size": "h1",
         "columns_desktop": 3,
         "show_view_all": true,
         "show_image": true,
@@ -284,6 +327,7 @@
   "order": [
     "image_banner",
     "multicolumn_q6Djdh",
+    "rich_text_Vn8dz4",
     "collection_list_DannCJ",
     "featured_collection",
     "collection_list_CWYPeW",
