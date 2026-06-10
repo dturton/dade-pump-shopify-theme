@@ -14,16 +14,32 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
+        "announcement_rBC8ar": {
+          "type": "announcement",
+          "settings": {
+            "text": "Goulds products are subject to manufacturer MAP policies. Add products to your cart to view your purchase price. No obligation to purchase.",
+            "link": "shopify://collections/goulds"
+          }
+        },
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
             "text": "Nationwide: (305) 420-6676 - Add Product to Cart for Lowest Price! - Free Shipping on Orders $250 and Up *Exclusions Apply",
             "link": "shopify://policies/shipping-policy"
           }
+        },
+        "announcement_p3Gpj6": {
+          "type": "announcement",
+          "settings": {
+            "text": "Welcome to our store",
+            "link": ""
+          }
         }
       },
       "block_order": [
-        "announcement-bar-0"
+        "announcement_rBC8ar",
+        "announcement-bar-0",
+        "announcement_p3Gpj6"
       ],
       "settings": {
         "auto_rotate": false,
