@@ -11,9 +11,166 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
+      }
+    },
+    "rich_text_pCqnJV": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_ebqAVQ": {
+          "type": "heading",
+          "settings": {
+            "heading": "Frequently Asked Questions",
+            "heading_size": "h1"
+          }
+        },
+        "text_yw6LrN": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Whether you're selecting a new pump, troubleshooting an electric motor, looking for replacement parts, or have questions about pricing and shipping, you'll find answers to many of our customers' most common questions below. </p><p><strong>If you need additional assistance, the experienced team at Dade Pump & Supply is here to help by phone or email.</strong></p>"
+          }
+        },
+        "button_xQDKaL": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_ebqAVQ",
+        "text_yw6LrN",
+        "button_xQDKaL"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "collapsible_content_Uz39dG": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_yzHcEP": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What Are Your Business Hours?",
+            "icon": "check_mark",
+            "row_content": "<p>Dade Pump & Supply is open <strong>Monday through Friday from 7:30 AM to 5:00 PM Eastern Time</strong> and <strong>Saturday from 7:30 AM to 12:00 PM Eastern Time</strong>. During business hours, our team is available to assist with pump selection, electric motor replacement, repair services, parts identification, order support, and technical questions.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_z9YQmX": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How Do I Check the Status of My Pump or Motor Order?",
+            "icon": "check_mark",
+            "row_content": "<p>To check the status of an order, please call our customer service team at <a href=\"tel:+1-305-235-5000 \" title=\"tel:+1-305-235-5000 \">(305) 235-5000</a> or email <a href=\"mailto:sales@dadepump.com\">sales@dadepump.com</a>. Having your <strong>order number </strong>available will help us provide the most accurate and up-to-date information regarding shipping, tracking, and estimated delivery dates.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_nwXy36": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How Do I Cancel an Order?",
+            "icon": "check_mark",
+            "row_content": "<p><strong>Orders may be canceled prior to shipment. </strong>If you need to cancel an order for a pump, motor, replacement part, or accessory, please contact our sales team as soon as possible at <a href=\"tel:+1-305-235-5000\" title=\"tel:+1-305-235-5000\">(305) 235-5000</a> or <a href=\"mailto:sales@dadepump.com\">sales@dadepump.com</a>. <em><strong>Once an order has shipped, cancellation may no longer be possible.</strong></em></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_7J7Kti": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What Payment Methods Do You Accept?",
+            "icon": "check_mark",
+            "row_content": "<p>Dade Pump & Supply <strong>accepts all major credit cards, ACH transfers, wire transfers, PayPal, Shop Pay, checks, and cash</strong>. For international orders, payment must be made by wire transfer. Contact our sales team if you have questions regarding payment options for domestic or international pump and motor purchases.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_bkebJK": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How Do I Apply Tax-Exempt Status to My Account?",
+            "icon": "check_mark",
+            "row_content": "<p>If your organization qualifies for tax-exempt purchasing, please create an account on our website and email your tax exemption certificate to <a href=\"mailto:sales@dadepump.com\">sales@dadepump.com</a>. Once your documentation has been reviewed and approved, your account will be updated and you will receive confirmation by email. Sales tax is charged according to applicable laws based on the shipping destination.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_P3mXeh": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What Is Your Pump and Electric Motor Warranty Process?",
+            "icon": "check_mark",
+            "row_content": "<p>Most pumps, electric motors, controls, and replacement parts sold by Dade Pump & Supply are covered by manufacturer warranties. If you believe your product qualifies for warranty consideration, please submit a warranty evaluation request to <a href=\"mailto:warranty@dadepump.com\">warranty@dadepump.com</a>.</p><p>To expedite the review process, include:</p><ul><li>Photos of the product</li><li>Videos showing the issue (if applicable)</li><li>A description of the problem</li><li>Your order information</li></ul><p>Warranty claims are typically reviewed within 24 to 48 business hours. Final warranty approval or denial is determined by the manufacturer. Shipping and related costs are generally not covered by either the manufacturer or Dade Pump & Supply. Our team will advocate on your behalf throughout the warranty process.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_V49QnQ": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_6FAMrX": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_CHfN8B": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_yzHcEP",
+        "collapsible_row_z9YQmX",
+        "collapsible_row_nwXy36",
+        "collapsible_row_7J7Kti",
+        "collapsible_row_bkebJK",
+        "collapsible_row_P3mXeh",
+        "collapsible_row_V49QnQ",
+        "collapsible_row_6FAMrX",
+        "collapsible_row_CHfN8B"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "row",
+        "container_color_scheme": "scheme-2",
+        "color_scheme": "scheme-2",
+        "open_first_collapsible_row": true,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 0,
+        "padding_bottom": 36
       }
     },
     "image_banner_HJTirq": {
@@ -56,6 +213,8 @@
   },
   "order": [
     "main",
+    "rich_text_pCqnJV",
+    "collapsible_content_Uz39dG",
     "image_banner_HJTirq"
   ]
 }
