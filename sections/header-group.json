@@ -43,6 +43,31 @@
         "enable_language_selector": false
       }
     },
+    "announcement_bar_N4eJQx": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement_7QXzdP": {
+          "type": "announcement",
+          "settings": {
+            "text": "Shop the Independence Weekend Sale",
+            "link": "shopify://blogs/resources/freedom-flows-july-4th-sale"
+          }
+        }
+      },
+      "block_order": [
+        "announcement_7QXzdP"
+      ],
+      "name": "t:sections.announcement-bar.presets.name",
+      "settings": {
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "color_scheme": "scheme-2",
+        "show_line_separator": true,
+        "show_social": false,
+        "enable_country_selector": false,
+        "enable_language_selector": false
+      }
+    },
     "header": {
       "type": "header",
       "settings": {
@@ -65,6 +90,7 @@
   },
   "order": [
     "announcement-bar",
+    "announcement_bar_N4eJQx",
     "header"
   ]
 }
