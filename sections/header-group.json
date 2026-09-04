@@ -14,24 +14,24 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
-        "announcement_rBC8ar": {
-          "type": "announcement",
-          "settings": {
-            "text": "Authorized Goulds Distributor • MAP Pricing Applies • Add to Cart to View Your Discounted Price",
-            "link": "shopify://collections/goulds"
-          }
-        },
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
             "text": "Nationwide: (305) 235-5000 - Add Product to Cart for Lowest Price! - Free Shipping on Orders $250 and Up *Exclusions Apply",
             "link": "shopify://policies/shipping-policy"
           }
+        },
+        "announcement_rBC8ar": {
+          "type": "announcement",
+          "settings": {
+            "text": "Authorized Goulds Distributor • MAP Pricing Applies • Add to Cart to View Your Discounted Price",
+            "link": "shopify://collections/goulds"
+          }
         }
       },
       "block_order": [
-        "announcement_rBC8ar",
-        "announcement-bar-0"
+        "announcement-bar-0",
+        "announcement_rBC8ar"
       ],
       "settings": {
         "auto_rotate": false,
