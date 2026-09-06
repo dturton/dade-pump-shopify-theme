@@ -3596,3 +3596,14 @@ details-disclosure > details {
   }
 }
 .card__badge { display: none; }
+
+
+@media (min-width: 750px) {
+  .ais-page .ais-results-as-block .ais-hit {
+    width: 30% !important;
+    margin-left: 5% !important;
+  }
+  .ais-page .ais-results-as-block .ais-Hits-item:nth-of-type(3n+1) .ais-hit {
+    margin-left: 0 !important;
+  }
+}
