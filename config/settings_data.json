@@ -165,7 +165,7 @@
         "type": "shopify://apps/algolia-ai-search-discovery/blocks/autocomplete/57bb7f86-d5fe-4d43-96ca-3953324494cf",
         "disabled": false,
         "settings": {
-          "is_horizon_theme": false
+          "is_horizon_theme": true
         }
       }
     },
