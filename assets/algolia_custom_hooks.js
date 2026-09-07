@@ -3,13 +3,13 @@ const sleep = (ms, hookName) =>
 		console.log("sleeping for ", ms, hookName);
 		setTimeout(resolve, ms);
 	});
-    
+
 document.addEventListener("algolia.hooks.initialize", () => {
 	algoliaShopify.hooks.registerHook(
 		"beforeInstantSearchAsyncFunction",
-		async () => {
+		async (options) => {
 			console.log(
-				"----------- beforeInstantSearchAsyncFunction started ----------------",
+				options,
 			);
 			await sleep(1000, "beforeInstantSearchAsyncFunction");
 		},
