@@ -3,7 +3,7 @@ document.addEventListener("algolia.hooks.initialize",
     algoliaShopify.hooks.registerHook(
       "beforeAutocompleteOptions",
       function (options) {
-        console.log(options)
+        console.log('algolia init' + JSON.stringify(options))
       },
     );
   }
