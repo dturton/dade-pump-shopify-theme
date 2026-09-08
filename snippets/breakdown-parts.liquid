@@ -8,7 +8,7 @@
 {%- endcomment -%}
 
 {%- liquid
-  assign sorted_entries = entries | sort: 'ref_number'
+  assign sorted_entries = entries | sort: 'ref_code'
 
   case section.settings.diagram_source
     when 'last'
@@ -64,7 +64,7 @@
           assign qty = entry.quantity_needed.value | default: 1
           assign variant = part.selected_or_first_available_variant
           assign form_id = 'BreakdownPart-' | append: section.id | append: '-' | append: forloop.index
-          assign ref_number = entry.ref_number.value
+          assign ref_code = entry.ref_code.value
         -%}
         <li class="breakdown-parts__item">
           <div class="breakdown-parts__item-main">
@@ -73,10 +73,10 @@
             </a>
 
             <div class="breakdown-parts__item-meta">
-              {%- if ref_number != blank -%}
+              {%- if ref_code != blank -%}
                 <span class="breakdown-parts__meta-item">
                   <span class="breakdown-parts__meta-label">Ref No:</span>
-                  <span class="breakdown-parts__meta-value">{{ ref_number }}</span>
+                  <span class="breakdown-parts__meta-value">{{ ref_code }}</span>
                 </span>
               {%- endif -%}
               {%- if variant.sku != blank -%}
