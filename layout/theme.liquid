@@ -320,6 +320,26 @@
 o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n,o.async=!0,o.defer=!0,
 o.onload=function(){window.trackingFunctions.onLoad({appId:"69fcc4baf6ed25001d76c46e"})},
 document.head.appendChild(o)}initApollo();</script>
+
+<script>
+(function (w, d, s, u) {
+if (w.oaiq) return;
+var q = function () {
+q.q.push(arguments);
+};
+q.q = [];
+w.oaiq = q;
+var js = d.createElement(s);
+js.async = true;
+js.src = u;
+var f = d.getElementsByTagName(s)[0];
+f.parentNode.insertBefore(js, f);
+})(window, document, "script", "https://bzrcdn.openai.com/sdk/oaiq.min.js");
+oaiq("init", {
+pixelId: "WqoyEQAXJNMUupba3kbC1i"
+});
+</script>
+
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
